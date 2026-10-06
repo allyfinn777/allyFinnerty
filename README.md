@@ -1,1 +1,3 @@
 # allyFinnerty
+
+Learning:
