@@ -1,0 +1,67 @@
+# R essentials
+Appendix A:
+
+Download R for free from the Comprehensive R Archive Network (CRAN).
+- R is an open-source free programming language focused on statistics
+Download Rstudio, which is an Integrated Development Environment (IDE).
+- Makes the language easier to understand
+  - Ex. R is the engine and Rstudio is the car
+
+Key concepts and skills; 
+- Understand R and R studio and workflows
+  - Ex. using dplr and making graphs with ggplot2 makes manipulating/understanding data
+- Functionality of tidyverse
+  - Ex. importing data, data manipulation, string manipulation
+- Data science workflows
+  - Ex. Class functions, data simulation
+
+Software/packages needed: 
+tidyverse is a collection of R packages designed for data science
+- Base R
+- Core tidyverse (including): *tidyverse is a package of packages*
+  - dplyr (5 dplyr functions)
+    - select(): picks a particular column
+    - filter(): pick particular row of a dataset
+          - Also dedicated function: slice()
+    - arrange(): change the order of the dataset 
+          - modify arrange() with (desc) to change ascending to descending 
+          - modify arrange() with (accross) to arrange a variety of columns
+    - mutate(): when we want to make a new column
+          - could use mutate() with math, addition/subraction
+          - could use mutate() with log(), lead(), lag(), cumsum()
+          - could use mutate() with across()
+    - summarise() or summarize(): when we would like to make new, condensed, summary variables
+      - .by and count()
+  - forcats
+  - ggplot 2
+  - readr
+  - stringr
+  - tibble
+  - tidyr
+- Outer tidyverse (must be loaded separate)
+  - haven
+  - lubridate
+- janitor
+*if you want to use a package, you first must install it and then load it when wanting to use*
+
+# Install/load by:
+install.packages()
+library()
+- install.packages(tidyverse)
+- install.packages(janitor)
+  - library(tidyverse)
+  - library(lubridate)
+
+Set up Posit Cloud
+- Online version of Rstudio
+- Each Posit Cloud workspace is esentially a new comp, must install packages each time
+
+# Rstudio
+Console: can type and execute Rcode line by line
+
+naming:
+my_name <- Ally
+- Assignment operator allocates Ally to 'my_name'
+
+Save the project with new rds file:
+saveRDS(object = my_name, file = "my_first_file.rds")
